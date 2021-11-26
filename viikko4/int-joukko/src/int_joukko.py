@@ -68,7 +68,7 @@ class IntJoukko:
             self.ljono[j + 1] = apu
 
         self.alkioiden_lkm = self.alkioiden_lkm - 1
-        return True
+         True
 
 
     def kopioi_taulukko(self, kopioitava, kopio):
