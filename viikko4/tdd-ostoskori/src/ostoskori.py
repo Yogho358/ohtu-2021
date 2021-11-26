@@ -50,11 +50,11 @@ class Ostoskori:
             if ostos.tuotteen_nimi() == poistettava.nimi():
                 ostos.muuta_lukumaaraa(-1)
                 if self.tavaroita_korissa() == 0:
-                    self.kori = []
+                    self.tyhjenna()
                 break
 
     def tyhjenna(self):
-        pass
+        self.kori = []
         # tyhjentää ostoskorin
 
     def ostokset(self):
