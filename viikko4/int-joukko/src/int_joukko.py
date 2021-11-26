@@ -56,14 +56,14 @@ class IntJoukko:
         
 
         for i in range(0, self.alkioiden_lkm):
-            if n == self.ljono[i]:
+            if n == s.ljono[i]:
                 kohta = i  # siis luku löytyy tuosta kohdasta :D
                 self.ljono[i] = 0
                 break
 
         
         for j in range(kohta, self.alkioiden_lkm - 1):
-            apu = self.ljono[j]
+             = self.ljono[j]
             self.ljono[j] = self.ljono[j + 1]
             self.ljono[j + 1] = apu
 
@@ -102,32 +102,35 @@ class IntJoukko:
 
     @staticmethod
     def leikkaus(a, b):
-        y = IntJoukko()
+        leikkaus = IntJoukko()
         a_taulu = a.to_int_list()
         b_taulu = b.to_int_list()
 
         for i in range(0, len(a_taulu)):
             for j in range(0, len(b_taulu)):
                 if a_taulu[i] == b_taulu[j]:
-                    y.lisaa(b_taulu[j])
+                    leikkaus.lisaa(b_taulu[j])
 
-        return y
+        return leikkaus
 
     @staticmethod
     def erotus(a, b):
-        z = IntJoukko()
+        erotus = IntJoukko()
         a_taulu = a.to_int_list()
         b_taulu = b.to_int_list()
 
         for i in range(0, len(a_taulu)):
-            z.lisaa(a_taulu[i])
+            erotus.lisaa(a_taulu[i])
 
         for i in range(0, len(b_taulu)):
-            z.poista(b_taulu[i])
+            erotus.poista(b_taulu[i])
 
         return z
 
     def __str__(self):
+
+
+
         if self.alkioiden_lkm == 0:
             return "{}"
         elif self.alkioiden_lkm == 1:
