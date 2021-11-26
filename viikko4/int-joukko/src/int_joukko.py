@@ -56,19 +56,19 @@ class IntJoukko:
         
 
         for i in range(0, self.alkioiden_lkm):
-            if n == s.ljono[i]:
+            if n == self.ljono[i]:
                 kohta = i  # siis luku löytyy tuosta kohdasta :D
                 self.ljono[i] = 0
                 break
 
         
         for j in range(kohta, self.alkioiden_lkm - 1):
-             = self.ljono[j]
+            apu = self.ljono[j]
             self.ljono[j] = self.ljono[j + 1]
             self.ljono[j + 1] = apu
 
         self.alkioiden_lkm = self.alkioiden_lkm - 1
-         True
+        return True
 
 
     def kopioi_taulukko(self, kopioitava, kopio):
@@ -125,11 +125,11 @@ class IntJoukko:
         for i in range(0, len(b_taulu)):
             erotus.poista(b_taulu[i])
 
-        return z
+        return erotus
 
     def __str__(self):
 
-
+        
 
         if self.alkioiden_lkm == 0:
             return "{}"
